@@ -2,9 +2,9 @@
 
 
 :root {
-  --color-main: #f68657;
+  --color-main: #DEC018;
   --color-text: #383a3f;
-  --color-dark: #1f2124;
+  --color-dark: #5E5627;
   --color-gray: #677;
   --color-bg: #f3f6f9;
   --color-light: #acb4bd;
@@ -14,14 +14,15 @@
 }
 
 .dark {
-  --color-main: #f68657;
+  --color-main: #DEC018;
   --color-text: #d6d1d1;
   --color-dark: #f5f6f7;
   --color-gray: #999;
   --color-bg: #1f2124;
-  --color-lighter: #292a2c;
-  --color-white: #2e3235;
+  --color-lighter: #2c2b29;
+  --color-white: #35332e;
   --color-border:#252629;
+  --color-hover: #FFD205;
 }
 
 /* BASE STYLES */
@@ -266,20 +267,33 @@ a {
 .note-header button {
   border: none;
   outline: none;
-  font-weight: 600;
+  font-weight: 300;
   background-color: transparent;
   font-size: 18px;
   cursor: pointer;
 }
 
+.note-header button:hover {
+  color: var(--color-hover);
+}
+
+.note .textarea-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .note textarea {
-  background-color: var(--color-white);
+  background-color: var(--color-lighter);
+  margin-top: 20px;
   border: none;
+  border-radius: 15px;
   padding: 16px 12px;
-  width: 100%;
-  height: 70vh;
+  width: 80%;
+  height: 60vh;
   resize: none;
   scrollbar-width: none; /* Firefox */
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .note textarea:active,
@@ -290,4 +304,11 @@ a {
 
 .note textarea::-webkit-scrollbar {
   display: none;
+}
+
+@media screen and (max-height: 420px) {
+  .note textarea {
+    margin-top: 0;
+    height: 50vh;
+  }
 }
