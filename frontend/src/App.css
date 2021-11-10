@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
 
 
 :root {
@@ -32,7 +31,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Lexend', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: inherit;
   font-size: inherit;
   scroll-behavior: smooth;
@@ -59,6 +58,7 @@ a {
   background-color: var(--color-bg);
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 
@@ -68,6 +68,7 @@ a {
   height: 88vh;
   margin: 0 auto;
   background-color: var(--color-white);
+  border-radius: 15px;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.05);
   position: relative;
 }
@@ -77,15 +78,16 @@ a {
   display: flex;
   align-items: center;
   padding: 16px;
-  justify-content: space-between;
+  justify-content: center;
+  border-radius: 15px 15px 0 0;
   background-color: var(--color-lighter);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .app-header h1 {
-  font-size: 30px;
+  font-size: 35px;
   color: var(--color-dark);
-  font-weight: 800;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -109,29 +111,41 @@ a {
 
 /* NOTES STYLES */
 
+.notes {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
 .notes-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 16px;
+  border-bottom: 1px solid  var(--color-border);
+}
+
+.notes-count-header {
+  background-color: var(--color-main);
+  padding: 5px 15px;
+  border-radius: 50%;
 }
 
 .notes-title,
 .notes-count {
   color: var(--color-main);
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .notes-count {
   font-size: 18px;
-  color: var(--color-gray);
+  color: var(--color-white);
 }
 
 
 .notes-list {
   padding: 0;
-  margin: 16px 0;
+  margin: 0 0 16px 0;
   height: 70vh;
   overflow-y: auto;
   scrollbar-width: none; /* Firefox */
@@ -143,7 +157,6 @@ a {
 
 .notes-list-item {
   border-bottom: 1px solid  var(--color-border);
-  margin-bottom: 12px;
   padding: 8px 16px;
   transition: all 0.2s ease-in-out;
 }
@@ -153,9 +166,8 @@ a {
   cursor: pointer;
 }
 
-.notes-list-item h3,
-.notes-list-item p span {
-  font-weight: 600;
+.notes-list-item h3 {
+  font-weight: 700;
 }
 
 
@@ -170,13 +182,39 @@ a {
   color: var(--color-light);
 }
 
+.notes-list-item-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 200;
+}
+
+.button-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50% 0 0 0;
+  bottom: 0;
+  right: 0;
+  width: 85px;
+  height: 85px;
+  background-color: var(--color-lighter);
+}
+
+.button {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  background-color: var(--color-lighter);;
+  width: 100%;
+  height: 25px;
+  border-radius: 0 0 15px 15px;
+}
+
 .floating-button {
   font-size: 48px;
-  position: absolute;
-  bottom: 24px;
-  right: 16px;
   background: var(--color-main);
-  border: none;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -185,11 +223,17 @@ a {
   justify-content: center;
   cursor: pointer;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  transition: all .2s ease-out;
 }
 
 
 .floating-button > svg {
   fill: var(--color-bg);
+}
+
+.floating-button:hover {
+  width: 63px;
+  height: 63px;
 }
 
 
