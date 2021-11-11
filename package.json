@@ -1,6 +1,5 @@
 {
   "name": "frontend",
-  "proxy": "http://127.0.0.1:8000/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,7 +17,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 8000",
     "postinstall": "npm run build"
   },
   "engines": {
