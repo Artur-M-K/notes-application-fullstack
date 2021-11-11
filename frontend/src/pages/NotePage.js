@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import {Link} from 'react-router-dom';
 import { ReactComponent as ArrowLeft } from '../assets/arrow-left.svg';
 
@@ -7,18 +7,18 @@ const NotePage = ({match, history}) => {
 
     const [note, setNote] = useState(null);
 
-    useEffect(() => {
-        getNote();
-    }, [noteId]);
-
-    let getNote = async() => {
+    let getNote = useCallback(async() => {
         if (noteId === 'new') {
             return;
         }
         const response = await fetch(`http://127.0.0.1:8000/api/notes/${noteId}`);
         const data = await response.json();
         setNote(data);
-    };
+    }, [noteId]);
+
+    useEffect(() => {
+        getNote();
+    }, [noteId, getNote]);
 
     const createNote = async () => {
         
