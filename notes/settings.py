@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['notes-view.herokuapp.com', '127.0.0.1', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
-    'corsheaders',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'api.apps.ApiConfig',
+    'corsheaders',
     'rest_framework',
     
 ]
