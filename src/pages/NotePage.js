@@ -11,7 +11,7 @@ const NotePage = ({match, history}) => {
         if (noteId === 'new') {
             return;
         }
-        const response = await fetch(`https://127.0.0.1:8000/api/notes/${noteId}`);
+        const response = await fetch(`https://127.0.0.1:8000/api/notes/${noteId}/`);
         const data = await response.json();
         setNote(data);
     }, [noteId]);
