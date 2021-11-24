@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-kp)73ig6^t&1pefvt7@jvc!j9h_pgt78&%_0h50+r(*a8n5_7s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['notes-view.herokuapp.com', 'https://127.0.0.1:8000']
+ALLOWED_HOSTS = ['notes-view.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -142,17 +142,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
 # CORS_ALLOW_CREDENTIALS = True
 
-# CORS_ORIGIN_WHITELIST = (
-#         'https://localhost:8000',
-#         'https://127.0.0.1:8000',
+CORS_ORIGIN_WHITELIST = (
+        'http://localhost:8000',
+        'http://127.0.0.1:8000',
+        'http://localhost:3000',
+        'http://127.0.0.1:3000',
     
-#     )
+    )
 
-CORS_ALLOW_METHODS = [
-    'DELETE',
-    'GET',
-    'OPTIONS',
-    'PATCH',
-    'POST',
-    'PUT',
-]
+# CORS_ALLOW_METHODS = [
+#     'DELETE',
+#     'GET',
+#     'OPTIONS',
+#     'PATCH',
+#     'POST',
+#     'PUT',
+# ]

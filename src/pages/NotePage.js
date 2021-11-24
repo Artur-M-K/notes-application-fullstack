@@ -11,7 +11,7 @@ const NotePage = ({match, history}) => {
         if (noteId === 'new') {
             return;
         }
-        const response = await fetch(`https://127.0.0.1:8000/api/notes/${noteId}/`);
+        const response = await fetch(`http://127.0.0.1:8000/api/notes/${noteId}/`);
         const data = await response.json();
         setNote(data);
     }, [noteId]);
@@ -22,7 +22,7 @@ const NotePage = ({match, history}) => {
 
     const createNote = async () => {
         
-            await fetch(`https://127.0.0.1:8000/api/notes/create/`, {
+            await fetch(`http://127.0.0.1:8000/api/notes/create/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ const NotePage = ({match, history}) => {
     };
 
     const updateNote = async () => {
-        await fetch(`https://127.0.0.1:8000/api/notes/${noteId}/update/`, {
+        await fetch(`http://127.0.0.1:8000/api/notes/${noteId}/update/`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ const NotePage = ({match, history}) => {
     };
 
     const deleteNote = async () => {
-        await fetch(`https://127.0.0.1:8000/api/notes/${noteId}/delete/`, {
+        await fetch(`http://127.0.0.1:8000/api/notes/${noteId}/delete/`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
