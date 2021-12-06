@@ -27,7 +27,7 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['notes-view.herokuapp.com', '127.0.0.1', 'localhost']
 
@@ -142,13 +142,9 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ALLOWED_ORIGINS = (
-        'http://localhost:8000',
-        'http://127.0.0.1:8000',
-        'https://notes-view.herokuapp.com',
-    
-    )
+CORS_ALLOW_HEADERS = ['*']
+
 
     
