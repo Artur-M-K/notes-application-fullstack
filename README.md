@@ -1,6 +1,8 @@
 # Notes Application
 
-## [notes-app](https://notes-view.herokuapp.com)
+## [notes-app LIVE](https://notes-view.herokuapp.com)
+
+<img src="https://user-images.githubusercontent.com/80982136/144939002-e303de21-f084-4a52-9525-881c412ca7e2.gif" width="300" height="400">
 
 ## General info
 The Notes app is a simple, lightweight application that allows you to add notes, edit and delete them. Also sorts the notes from the last edited one.
