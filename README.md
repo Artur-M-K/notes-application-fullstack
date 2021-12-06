@@ -19,5 +19,8 @@ Project is created with:
 To run this project, install it locally:
 * ```git clone``` this repository or download and extract .zip
 * Install requirements with ```pip install -r requirements.txt```
+* Install dependencies with ```npm install```
 * change ```DEBUG = False``` to ```DEBUG = True``` in ```notes/settings.py``` file
-* Run with ```python manage.py runserver``` or ```python3 manage.py runserver```
+* ```npm run build```
+* Run server with ```python manage.py runserver``` or ```python3 manage.py runserver```
+* Run App with ```npm start```
