@@ -25,7 +25,7 @@ const NotesListPage = () => {
     return (
         <div className='notes'>
             <div className="notes-header">
-                <h2 className='notes-title'>&#9782; NOTES</h2>
+                <h2 className='notes-title'>NOTES</h2>
                 <div className='notes-count-header'>
                     <p className='notes-count'>{notes.length}</p>
                 </div>

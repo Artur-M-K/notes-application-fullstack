@@ -34,7 +34,7 @@ const ListItem = ({ note }) => {
     <Link to={`/note/${note.id}`}>
       <div className="notes-list-item">
         <div className="notes-list-item-title">
-        <h3>{getTitle(note)}</h3><span>{getDate(note)}</span>
+        <h3>&#9776; {getTitle(note)}</h3><span>{getDate(note)}</span>
           </div>
         <p>{getContent(note)}</p>
       </div>
